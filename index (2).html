@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LITERA – Edukasi Bahasa Indonesia di Dunia Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#E9DDFF;--surface:#fff;--ink:#24113F;--muted:#5A4580;--line:#C9B3F2;--accent:#6D28D9;--on-accent:#fff;--soft:#DCCBFF;--deep:#5B21B6;--mid:#BE185D;--light:#C4A8FF;--bad:#B5202F;--bad-bg:#FDECEE;--good:#17794F;--good-bg:#E4F5EC;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#160D2E;--surface:#22164A;--ink:#F3ECFF;--muted:#C9B8F0;--line:#45327A;--accent:#C4A8FF;--on-accent:#1E0B45;--soft:#33236B;--deep:#4C1D95;--mid:#9D174D;--light:#8B5CF6;--bad:#FF8A96;--bad-bg:#3A1B24;--good:#62D6A0;--good-bg:#153A2B;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#160D2E;--surface:#22164A;--ink:#F3ECFF;--muted:#C9B8F0;--line:#45327A;--accent:#C4A8FF;--on-accent:#1E0B45;--soft:#33236B;--deep:#4C1D95;--mid:#9D174D;--light:#8B5CF6;--bad:#FF8A96;--bad-bg:#3A1B24;--good:#62D6A0;--good-bg:#153A2B;color-scheme:dark}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Lexend",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7;font-size:16px}
+a{color:var(--accent)}
+header{background-color:var(--deep);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cg fill='%23FF7AB8' fill-opacity='.7'%3E%3Cpath transform='translate(6 8) scale(0.5)' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3Cpath transform='translate(38 38) scale(0.42)' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3Cpath transform='translate(40 6) scale(0.3)' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3Cpath transform='translate(8 42) scale(0.3)' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/g%3E%3C/svg%3E");border-bottom:3px solid var(--light)}
+.bar{max-width:980px;margin:0 auto;padding:12px 20px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between}
+.brand{font-weight:700;font-size:1.4rem;letter-spacing:.06em;color:#fff}
+.brand small{display:block;font-weight:400;font-size:.7rem;letter-spacing:0;color:#F8E6FD;margin-top:-4px}
+nav{display:flex;flex-wrap:wrap;gap:4px}
+nav a{padding:6px 12px;border-radius:8px;text-decoration:none;color:#FBEAFF;font-size:.95rem}
+nav a[aria-current="page"]{background:#fff;color:var(--deep);font-weight:500}
+header a:focus-visible{outline-color:#fff}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+main{max-width:980px;margin:0 auto;padding:28px 20px 56px}
+section.page{display:none}
+section.page.on{display:block}
+h1{font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.15;letter-spacing:-.02em;margin:0 0 16px}
+h2{font-size:1.45rem;margin:0 0 12px}
+h3{font-size:1.1rem;margin:0 0 8px}
+p{margin:0 0 14px;max-width:68ch}
+ul.l{margin:0 0 14px;padding-left:22px;max-width:68ch}
+ul.l li{margin-bottom:4px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:28px;margin-bottom:24px;border-radius:18px;background:linear-gradient(135deg,var(--soft),var(--surface));border:1px solid var(--line)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.btn{display:inline-block;padding:11px 20px;border-radius:10px;font:inherit;font-weight:500;text-decoration:none;border:2px solid var(--accent);cursor:pointer;background:var(--accent);color:var(--on-accent)}
+.btn.alt{background:transparent;color:var(--accent)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.ex{display:grid;gap:8px;margin:10px 0 14px}
+.ex div{padding:10px 14px;border-radius:8px}
+.ex .no{background:var(--bad-bg)}
+.ex .yes{background:var(--good-bg)}
+.ex b{display:block;font-size:.8rem;font-weight:500;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:8px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--mid);border-radius:14px;padding:18px}
+.card a{font-weight:500}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px 18px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:500;padding:12px 0;font-size:1.05rem}
+details[open] summary{border-bottom:1px solid var(--line);margin-bottom:12px}
+.tip{background:var(--soft);border-left:4px solid var(--accent);padding:10px 14px;border-radius:8px;margin:12px 0 16px}
+.mail{background:var(--soft);border-radius:10px;padding:14px;white-space:pre-line;font-size:.95rem;margin:10px 0 14px}
+input[type=search],textarea{width:100%;padding:11px 14px;border-radius:10px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;margin-bottom:12px}
+input[type=search]{max-width:420px}
+textarea{min-height:90px;resize:vertical}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:480px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:500;font-size:.9rem;background:var(--soft)}
+tr:last-child td{border-bottom:0}
+td:nth-child(2){font-weight:500;color:var(--accent)}
+td:nth-child(3){color:var(--muted);font-size:.9rem}
+mark{background:var(--soft);color:var(--accent);padding:1px 5px;border-radius:4px;font-weight:500}
+.out{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;min-height:56px;margin-bottom:6px}
+.opt{display:block;width:100%;text-align:left;padding:12px 14px;margin:8px 0;border-radius:10px;border:2px solid var(--line);background:transparent;color:var(--ink);font:inherit;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--accent)}
+.opt.ok{border-color:var(--good);background:var(--good-bg)}
+.opt.ng{border-color:var(--bad);background:var(--bad-bg)}
+.meta{color:var(--muted);font-size:.9rem;margin-bottom:8px}
+.fb{margin-top:10px;min-height:1.5em}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:12px 0}
+.team .box b{display:block}
+.team .box span{color:var(--muted);font-size:.9rem}
+footer{max-width:980px;margin:0 auto;padding:0 20px 28px;color:var(--muted);font-size:.88rem}
+@media (max-width:720px){.hero{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:no-preference){.opt{transition:border-color .15s}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<div class="brand">LITERA<small>Literasi Bahasa Indonesia Digital</small></div>
+<nav aria-label="Menu utama">
+<a href="#beranda">Beranda</a><a href="#materi">Materi</a><a href="#glosarium">Kata Baku</a><a href="#kuis">Kuis</a><a href="#tentang">Tentang</a>
+</nav></div></header>
+
+<main>
+<section class="page" id="p-beranda">
+<div class="hero">
+<div>
+<h1>Bahasa Indonesia yang baik, di mana pun kamu online</h1>
+<p>LITERA membantu kamu memakai bahasa Indonesia yang tepat di dunia digital: kapan boleh santai, kapan harus baku, dan bagaimana menulis pesan dan komentar yang jelas dan sopan.</p>
+<div class="btns"><a class="btn" href="#materi">Mulai belajar</a><a class="btn alt" href="#glosarium">Coba cek kata</a></div>
+</div>
+<div class="box">
+<h3>Pesan yang sama, dua cara menulis</h3>
+<div class="ex">
+<div class="no"><b>Kurang tepat untuk dosen</b>Pak, tugasnya udah aku kirim ya, makasih banget.</div>
+<div class="yes"><b>Lebih tepat</b>Selamat siang, Bapak. Tugas sudah saya kirimkan. Terima kasih banyak.</div>
+</div>
+<p style="margin:0;color:var(--muted);font-size:.9rem">Isinya sama, tetapi kesan dan kesopanannya berbeda.</p>
+</div>
+</div>
+<h2>Yang bisa kamu pelajari</h2>
+<div class="cards">
+<div class="card"><h3>Materi lengkap</h3><p>6 topik: ragam bahasa, kata baku dan ejaan, kalimat efektif, etika bermedia sosial, bahasa di masa depan digital, dan pentingnya literasi digital.</p><a href="#materi">Baca materi</a></div>
+<div class="card"><h3>Cek kata baku</h3><p>Daftar kata tidak baku dan istilah asing beserta bentuk yang tepat, plus alat pengubah kalimat.</p><a href="#glosarium">Buka kata baku</a></div>
+<div class="card"><h3>Kuis latihan</h3><p>10 soal untuk menguji pemahamanmu, lengkap dengan penjelasan jawaban.</p><a href="#kuis">Mulai kuis</a></div>
+</div>
+</section>
+
+<section class="page" id="p-materi">
+<h1>Materi belajar</h1>
+<p>Ada 6 topik. Klik judul untuk membuka tiap topik.</p>
+<details open><summary>1. Ragam bahasa: formal dan santai</summary>
+<p>Bahasa Indonesia punya beberapa ragam. Ragam <b>formal</b> dipakai untuk makalah, surel kepada dosen, dan surat resmi. Ragam <b>santai</b> dipakai untuk obrolan dengan teman. Keduanya sah, asalkan dipakai pada tempat yang tepat.</p>
+<ul class="l"><li>Formal: makalah, surel resmi, presentasi, unggahan lembaga</li><li>Santai: pesan pribadi, obrolan grup teman, komentar akrab</li></ul>
+<div class="ex"><div class="no"><b>Kurang tepat untuk dosen</b>Pak, tugasnya udah aku kirim ya.</div><div class="yes"><b>Lebih tepat</b>Selamat siang, Bapak. Tugas sudah saya kirimkan.</div></div>
+<div class="tip">Pertanyaan yang baik sebelum menulis: <b>siapa yang membaca ini, dan dalam suasana apa?</b></div>
+</details>
+<details><summary>2. Kata baku, ejaan, dan tanda baca</summary>
+<p><b>Kata baku</b> adalah kata yang sesuai kaidah dan tercantum dalam KBBI. Dalam tulisan resmi, pakai bentuk bakunya.</p>
+<div class="ex"><div class="no"><b>Tidak baku</b>silahkan, resiko, aktifitas, praktek, merubah, antri</div><div class="yes"><b>Baku</b>silakan, risiko, aktivitas, praktik, mengubah, antre</div></div>
+<p>Daftar lengkapnya ada di halaman <a href="#glosarium">Kata Baku</a>. Kalau ragu, cek di KBBI Daring.</p>
+<p><b>Ejaan dan tanda baca</b> membuat tulisan mudah dibaca dan tidak salah tafsir:</p>
+<ul class="l">
+<li><b>Huruf kapital</b> dipakai di awal kalimat, nama orang, nama tempat, nama hari dan bulan.</li>
+<li><b>Kata depan “di”, “ke”, “dari”</b> ditulis terpisah: di rumah, ke pasar, dari sekolah.</li>
+<li><b>Awalan “di-”</b> ditulis serangkai: dibaca, diunggah, dikirim.</li>
+<li><b>Tanda baca:</b> akhiri kalimat dengan titik, pisahkan rincian dengan koma, dan jangan memakai tanda seru atau tanda tanya berulang.</li>
+<li><b>Singkatan seperti “yg”, “dgn”, “utk”</b> sebaiknya tidak dipakai dalam tulisan resmi.</li>
+</ul>
+<div class="ex"><div class="no"><b>Kurang tepat</b>Buku itu di letakkan dimeja!!!</div><div class="yes"><b>Tepat</b>Buku itu diletakkan di meja.</div></div>
+</details>
+<details><summary>3. Kalimat efektif</summary>
+<p>Kalimat efektif itu jelas, hemat kata, tidak ambigu, dan logis. Hindari kata yang berlebihan (pleonasme).</p>
+<div class="ex">
+<div class="no"><b>Kurang efektif</b>Para mahasiswa-mahasiswa naik ke atas panggung agar supaya terlihat.</div>
+<div class="yes"><b>Efektif</b>Para mahasiswa naik ke panggung agar terlihat.</div>
+</div>
+<ul class="l"><li>“naik ke atas” cukup “naik”</li><li>“agar supaya” cukup “agar”</li><li>“para mahasiswa-mahasiswa” cukup “para mahasiswa”</li></ul>
+</details>
+<details><summary>4. Etika berbahasa di media sosial</summary>
+<ul class="l">
+<li>Pikir dulu sebelum mengunggah. Jejak digital sulit dihapus.</li>
+<li>Menulis dengan HURUF KAPITAL SEMUA terkesan seperti berteriak.</li>
+<li>Hindari kata kasar, ejekan, dan komentar yang merendahkan orang lain.</li>
+<li>Periksa kembali kabar sebelum dibagikan, dan tulis sumbernya.</li>
+<li>Baca ulang tulisanmu: apakah mudah dipahami dan tidak menyinggung?</li>
+</ul>
+<div class="ex"><div class="no"><b>Kurang santun</b>Komentarmu GA MASUK AKAL!!!</div><div class="yes"><b>Lebih santun</b>Menurut saya pendapat itu kurang tepat, karena datanya belum jelas.</div></div>
+</details>
+<details><summary>5. Bahasa Indonesia untuk masa depan digital</summary>
+<p>Kita makin sering berbicara dengan mesin: mesin pencari, chatbot, dan asisten suara. Kalimat yang jelas dan sesuai kaidah cenderung lebih mudah dipahami, baik oleh manusia maupun sistem.</p>
+<ul class="l"><li>Biasakan memakai padanan istilah Indonesia, seperti unduh, unggah, dan peramban.</li><li>Tulis kalimat lengkap dan jelas saat memberi perintah kepada asisten digital.</li><li>Ikut menjaga bahasa Indonesia tetap hidup di ruang digital.</li></ul>
+</details>
+<details><summary>6. Pentingnya literasi digital</summary>
+<p><b>Literasi digital</b> adalah kemampuan menemukan, memahami, menilai, dan membagikan informasi di dunia digital secara cerdas, aman, dan bertanggung jawab. Bahasa ada di inti semuanya: kamu perlu membaca dengan cermat sebelum percaya, dan menulis dengan jelas sebelum membagikan.</p>
+<p><b>Kenapa penting?</b></p>
+<ul class="l"><li>Informasi menyebar sangat cepat, termasuk kabar bohong (hoaks).</li><li>Salah paham bisa muncul karena tulisan yang tidak jelas atau tidak santun.</li><li>Data pribadi bisa bocor lewat tautan atau pesan palsu.</li></ul>
+<p><b>Empat pilar literasi digital</b> yang dikenal di Indonesia: cakap digital, budaya digital, etika digital, dan aman digital.</p>
+<p><b>Ciri kebahasaan hoaks:</b> judul provokatif, huruf kapital berlebihan, tanda seru bertubi-tubi, ajakan “sebarkan ke semua grup”, dan tidak menyebut sumber.</p>
+<div class="tip"><b>Cek fakta dalam 4 langkah:</b> baca isi sampai habis, periksa sumber dan tanggalnya, bandingkan dengan media resmi lain, lalu cek di situs pemeriksa fakta seperti turnbackhoax.id.</div>
+</details>
+</section>
+
+<section class="page" id="p-glosarium">
+<h1>Kata baku dan padanan istilah</h1>
+<p>Ketik kata untuk mencari, baik bentuk yang salah maupun bentuk yang benar.</p>
+<input type="search" id="cari" placeholder="Contoh: nggak, download, silahkan" aria-label="Cari kata">
+<div class="tw"><table><thead><tr><th>Kata / istilah</th><th>Bentuk yang tepat</th><th>Jenis</th></tr></thead><tbody id="gl"></tbody></table></div>
+<p id="kosong" class="meta" style="display:none;margin-top:12px">Kata tidak ditemukan. Coba kata lain.</p>
+<h2 style="margin-top:30px">Cek kalimatmu</h2>
+<p>Tulis kalimat santai, lalu klik tombol. Kata tidak baku yang ada di daftar akan diganti.</p>
+<textarea id="in" aria-label="Kalimat yang dicek" placeholder="Contoh: Aku udah kirim tugasnya, makasih banget ya"></textarea>
+<button class="btn" id="go">Ubah ke bentuk baku</button>
+<div class="out" id="out" aria-live="polite" style="margin-top:12px"></div>
+<p class="meta">Alat ini hanya mengganti kata yang ada di daftar. Tetap periksa susunan kalimat dan ejaan lainnya.</p>
+</section>
+
+<section class="page" id="p-kuis">
+<h1>Kuis singkat</h1>
+<div class="box" id="kq"></div>
+</section>
+
+<section class="page" id="p-tentang">
+<h1>Tentang LITERA</h1>
+<p>LITERA adalah website edukasi yang membahas penggunaan bahasa Indonesia yang baik di dunia digital. Website ini dibuat sebagai prototipe tugas “Implementasi Bahasa Indonesia Masa Depan”.</p>
+<h2>Tujuan</h2>
+<ul class="l"><li>Membantu pengguna memahami ragam bahasa dan kata baku.</li><li>Melatih penulisan pesan dan komentar yang jelas dan santun.</li><li>Mendorong penggunaan padanan istilah Indonesia di ruang digital.</li></ul>
+<h2>Kelompok 1</h2>
+<div class="team">
+<div class="box"><b>Reina Auliana</b><span>NIM 55201260026</span></div>
+<div class="box"><b>Nafiatun Nisa</b><span>NIM 55201260025</span></div>
+<div class="box"><b>Muchammad A’maludin</b><span>NIM 55201260038</span></div>
+</div>
+<p>Program Studi Teknik Informatika<br>Universitas Muhadi Setia Budi<br>Mata kuliah: Bahasa Indonesia<br>Dosen pengampu: Tri Linda Antika, S.Pd., M.Pd.</p>
+<p class="meta">Sumber rujukan: KBBI Daring dan Pedoman Umum Ejaan Bahasa Indonesia (Badan Bahasa, Kemendikbudristek).</p>
+</section>
+</main>
+<footer>LITERA – Edukasi Bahasa Indonesia di Dunia Digital · Kelompok 1 · Teknik Informatika · Universitas Muhadi Setia Budi</footer>
+
+<script>
+var M={"nggak":"tidak","gak":"tidak","ga":"tidak","tdk":"tidak","udah":"sudah","aja":"saja","banget":"sekali","bgt":"sekali","bikin":"membuat","kayak":"seperti","gimana":"bagaimana","kalo":"kalau","karna":"karena","krn":"karena","tapi":"tetapi","trus":"lalu","emang":"memang","cuma":"hanya","makasih":"terima kasih","yg":"yang","dgn":"dengan","utk":"untuk","ngirim":"mengirim","nyoba":"mencoba","ngerjain":"mengerjakan","silahkan":"silakan","merubah":"mengubah","antri":"antre","analisa":"analisis","resiko":"risiko","praktek":"praktik","apotik":"apotek","aktifitas":"aktivitas","kwalitas":"kualitas","nampak":"tampak","sekedar":"sekadar","hakekat":"hakikat","download":"unduh","upload":"unggah","share":"bagikan","link":"tautan","browser":"peramban","email":"surel","online":"daring","offline":"luring","password":"kata sandi","hacker":"peretas","server":"peladen","software":"perangkat lunak","screenshot":"tangkapan layar","backup":"cadangan","install":"pasang","phishing":"pengelabuan data","clickbait":"umpan klik"};
+var ASING=["download","upload","share","link","browser","email","online","offline","password","hacker","server","software","screenshot","backup","install","phishing","clickbait"];
+var Q=[["Bentuk baku dari “nggak” adalah…",["gak","tidak","ndak","nda"],1,"Dalam tulisan resmi, gunakan “tidak”."],["Kalimat yang penulisannya benar adalah…",["Buku itu di letakkan di meja.","Buku itu diletakkan di meja.","Buku itu diletakkan dimeja.","Buku itu di letakkan dimeja."],1,"“di-” sebagai awalan digabung (diletakkan), sedangkan “di” sebagai kata depan dipisah (di meja)."],["Kalimat yang paling efektif adalah…",["Para mahasiswa-mahasiswa dilarang merokok di kelas.","Para mahasiswa dilarang merokok di kelas.","Mahasiswa-mahasiswa para dilarang merokok di kelas.","Para mahasiswa semuanya dilarang merokok di kelas semua."],1,"“Para” sudah menunjukkan jamak, jadi tidak perlu diulang."],["Bentuk baku yang benar adalah…",["silahkan","silakhan","silakan","selakan"],2,"Bentuk bakunya “silakan”."],["Langkah yang paling tepat sebelum membagikan kabar di media sosial adalah…",["Langsung membagikan agar yang lain cepat tahu","Memeriksa sumber dan kebenarannya dulu","Menambah tanda seru agar menarik","Menunggu sampai banyak orang membagikan"],1,"Literasi digital berarti memeriksa dulu sebelum membagikan."],["Menulis dengan HURUF KAPITAL SEMUA di media sosial umumnya terkesan…",["lebih sopan","sebagai tanda hormat","seperti berteriak","wajib dalam bahasa baku"],2,"Huruf kapital semua umumnya dibaca sebagai nada tinggi atau berteriak."],["Padanan kata “upload” adalah…",["unduh","unggah","unjuk","unduhan"],1,"Upload = unggah, download = unduh."],["Bentuk baku yang benar adalah…",["analisa","analisis","analisys","analise"],1,"Bentuk bakunya “analisis”."],["Mengapa kalimat yang jelas dan sesuai kaidah penting saat memakai chatbot atau asisten suara?",["Karena mesin hanya paham bahasa Inggris","Karena kalimat yang jelas cenderung lebih mudah dipahami sistem maupun orang","Karena mesin menolak semua bahasa gaul","Karena kata baku selalu lebih panjang"],1,"Kejelasan membantu komunikasi, baik dengan manusia maupun sistem."],["Kapan bahasa santai atau gaul paling tepat dipakai?",["Di surel resmi kepada dosen","Di makalah","Di obrolan santai dengan teman","Di surat lamaran kerja"],2,"Sesuaikan ragam bahasa dengan pembaca dan situasinya."]];
+var pages=["beranda","materi","glosarium","kuis","tentang"],started=false;
+function show(){var h=(location.hash||"#beranda").slice(1);if(pages.indexOf(h)<0)h="beranda";
+pages.forEach(function(p){document.getElementById("p-"+p).classList.toggle("on",p===h)});
+document.querySelectorAll("nav a").forEach(function(a){if(a.getAttribute("href")==="#"+h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+if(h==="kuis"&&!started)mulai()}
+function glos(f){var b=document.getElementById("gl"),n=0;b.innerHTML="";
+Object.keys(M).forEach(function(k){if((k+" "+M[k]).toLowerCase().indexOf(f)>-1){n++;var tr=document.createElement("tr");
+[k,M[k],ASING.indexOf(k)>-1?"Istilah asing":"Kata tidak baku"].forEach(function(c){var td=document.createElement("td");td.textContent=c;tr.appendChild(td)});b.appendChild(tr)}});
+document.getElementById("kosong").style.display=n?"none":"block"}
+document.getElementById("cari").addEventListener("input",function(e){glos(e.target.value.trim().toLowerCase())});
+document.getElementById("go").addEventListener("click",function(){
+var o=document.getElementById("out"),t=document.getElementById("in").value;o.innerHTML="";
+if(!t.trim()){o.textContent="Tulis kalimat dulu ya.";return}
+var n=0;t.split(/(\s+)/).forEach(function(w){var m=w.match(/^([^\p{L}]*)([\p{L}’'-]+)([^\p{L}]*)$/u);
+if(m&&M[m[2].toLowerCase()]){var r=M[m[2].toLowerCase()];if(m[2][0]!==m[2][0].toLowerCase())r=r[0].toUpperCase()+r.slice(1);
+o.appendChild(document.createTextNode(m[1]));var mk=document.createElement("mark");mk.textContent=r;o.appendChild(mk);o.appendChild(document.createTextNode(m[3]));n++}
+else o.appendChild(document.createTextNode(w))});
+var s=document.createElement("div");s.className="meta";s.style.marginTop="8px";s.textContent=n?n+" kata diganti (ditandai warna).":"Tidak ada kata tidak baku dari daftar yang ditemukan.";o.appendChild(s)});
+var i=0,skor=0;
+function mulai(){started=true;i=0;skor=0;tampil()}
+function tampil(){var k=document.getElementById("kq");k.innerHTML="";
+if(i>=Q.length){var t=document.createElement("h2");t.textContent="Skor kamu: "+skor+" dari "+Q.length;k.appendChild(t);
+var p=document.createElement("p");p.textContent=skor===Q.length?"Sempurna! Bahasa Indonesia-mu sudah mantap.":skor>=Q.length*0.6?"Bagus! Baca lagi materi untuk menyempurnakan.":"Ayo pelajari materinya dulu, lalu coba lagi.";k.appendChild(p);
+var b=document.createElement("button");b.className="btn";b.textContent="Ulangi kuis";b.onclick=mulai;k.appendChild(b);return}
+var q=Q[i],m=document.createElement("div");m.className="meta";m.textContent="Soal "+(i+1)+" dari "+Q.length;k.appendChild(m);
+var h=document.createElement("h2");h.textContent=q[0];k.appendChild(h);
+var fb=document.createElement("div");fb.className="fb";fb.setAttribute("aria-live","polite");
+q[1].forEach(function(o,j){var b=document.createElement("button");b.className="opt";b.textContent=o;
+b.onclick=function(){k.querySelectorAll(".opt").forEach(function(x,y){x.disabled=true;if(y===q[2])x.classList.add("ok")});
+if(j===q[2]){skor++;fb.textContent="Benar. "+q[3]}else{b.classList.add("ng");fb.textContent="Belum tepat. "+q[3]}
+var nx=document.createElement("button");nx.className="btn";nx.style.marginTop="12px";nx.textContent=i===Q.length-1?"Lihat skor":"Soal berikutnya";nx.onclick=function(){i++;tampil()};k.appendChild(nx)};
+k.appendChild(b)});k.appendChild(fb)}
+window.addEventListener("hashchange",show);glos("");show();
+</script>
+</body>
+</html>
